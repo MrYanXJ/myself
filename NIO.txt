@@ -1,0 +1,16 @@
+NIO三大核心部分：
+	1、Channel（通道）：
+		与IO中的Stream类似，不同的是Stream为单向的如：InputStream、OutputStream
+		Channel是双向的即可以读也可以写。
+		实现-->FileChannel（文件通道）
+			   DatagramChannel
+			   SocketChannel
+			   ServerSocketChannel
+	2、Buffer（缓冲区）
+	3、Selector（选择区）-->用于监听多个通道的事件（比如：连接打开，数据到达）。
+							因此，单个线程可以监听多个数据通道。
+
+NIO与IO区别：
+	1、IO是面向流的，NIO是面向缓冲区的。
+	2、IO各种流是阻塞的即当一个线程调用read()或write()时该线程阻塞
+		NIO是非阻塞模式。
